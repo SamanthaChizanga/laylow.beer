@@ -34,10 +34,11 @@
       return Math.round(Math.random() * (max - min) + min);
     }
 
-    var beersObj = [{
-        name: '1nce-again',
-        file: '1nce-again.jpg',
-        status: 0
+    var beersObj = [
+      {
+        name: 'bonita',
+        file: 'bonita.jpg',
+        status: 1
       },
       {
         name: 'black-on-both-sides',
@@ -45,8 +46,8 @@
         status: 1
       },
       {
-        name: 'bonita',
-        file: 'bonita.jpg',
+        name: 'lowlands',
+        file: 'lowlands.jpg',
         status: 1
       },
       {
@@ -70,6 +71,11 @@
         status: 0
       },
       {
+        name: '1nce-again',
+        file: '1nce-again.jpg',
+        status: 0
+      },
+      {
         name: 'five-elements',
         file: 'five-elements.jpg',
         status: 0
@@ -77,31 +83,6 @@
       {
         name: 'ghost-in-a-shell',
         file: 'ghost-in-a-shell.jpg',
-        status: 0
-      },
-      {
-        name: 'instrumental',
-        file: 'instrumental.jpg',
-        status: 0
-      },
-      {
-        name: 'knowledge',
-        file: 'knowledge.jpg',
-        status: 0
-      },
-      {
-        name: 'lowlands',
-        file: 'lowlands.jpg',
-        status: 1
-      },
-      {
-        name: 'petra',
-        file: 'petra.jpg',
-        status: 0
-      },
-      {
-        name: 'red-beauty',
-        file: 'red-beauty.jpg',
         status: 0
       },
       {
@@ -115,6 +96,31 @@
         status: 1
       },
       {
+        name: 'zenith',
+        file: 'zenith.jpg',
+        status: 1
+      },
+      {
+        name: 'instrumental',
+        file: 'instrumental.jpg',
+        status: 0
+      },
+      {
+        name: 'knowledge',
+        file: 'knowledge.jpg',
+        status: 0
+      },
+      {
+        name: 'petra',
+        file: 'petra.jpg',
+        status: 0
+      },
+      {
+        name: 'red-beauty',
+        file: 'red-beauty.jpg',
+        status: 0
+      },
+      {
         name: 'tesserae',
         file: 'tesserae.jpg',
         status: 0
@@ -123,11 +129,6 @@
         name: 'window-seat',
         file: 'window-seat.jpg',
         status: 0
-      },
-      {
-        name: 'zenith',
-        file: 'zenith.jpg',
-        status: 1
       },
       {
         name: 'zero-sum',
@@ -140,7 +141,7 @@
       var width = getRandomSize(200, 450);
       var height = getRandomSize(200, 450);
       var className = (beer.status) ? "normal" : "desaturate";
-      $('#photos').append('<img class=' + className + ' style="height:' + height + 'px;width:' + width + 'px;" src="img/beers/' + beer.file + '" alt=' + beer.name + '>');
+      $('#photos').append('<img class=' + className + ' style="height:' + 300 + 'px;width:' + 300 + 'px;" src="img/beers/' + beer.file + '" alt=' + beer.name + '>');
     });
   </script>
 

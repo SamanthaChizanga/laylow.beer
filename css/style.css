@@ -54,7 +54,7 @@ a {
 
 @media only screen and (min-width: 100px) {
   .container {
-    width: 60%;
+    width: 55%;
   }
 }
 
@@ -69,7 +69,7 @@ a {
 
 @media only screen and (min-width: 320px) {
   .container {
-    width: 55%;
+    width: 50%;
   }
 }
 
@@ -84,7 +84,7 @@ a {
 
 @media only screen and (min-width: 480px) {
   .container {
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -99,7 +99,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .container {
-    width: 45%;
+    width: 40%;
   }
 }
 
@@ -114,7 +114,7 @@ a {
 
 @media only screen and (min-width: 992px) {
   .container {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -129,7 +129,7 @@ a {
 
 @media only screen and (min-width: 1150px) {
   .container {
-    width: 35%;
+    width: 30%;
   }
 }
 
@@ -144,7 +144,7 @@ a {
 
 @media only screen and (min-width: 1500px) {
   .container {
-    width: 30%;
+    width: 25%;
   }
 }
 
