@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<!-- HTTPS://LAYLOWTO.CA -->
+<!-- HTTPS://LAYLOW.BEER -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="theme-color" content="#000000">
+
+  <title>Laylow</title>
+
+  <link rel="icon" type="image/png" href="img/beer.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One">
+  <link rel="stylesheet" href="css/style-beers.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+
+</head>
+
+<body>
+
+  <!-- <div class="image">
+        <img class="logo page-center" src="img/logo.png"></img>
+    </div> -->
+
+  <section id="photos"></section>
+
+  <script type="text/javascript">
+    function getRandomSize(min, max) {
+      return Math.round(Math.random() * (max - min) + min);
+    }
+
+    var beers = ['1nce-again.jpg', 'black-on-both-sides.jpg', 'bonita.jpg', 'cabrillo-ave.jpg', 'common-ground.jpg', 'eye-patch.jpg', 'figgie-smalls.jpg', 'five-elements.jpg', 'ghost-in-a-shell.jpg', 'instrumental.jpg', 'knowledge.jpg',
+      'lowlands.jpg', 'petra.jpg', 'red-beauty.jpg', 'refine.jpg', 'retrospect.jpg', 'tesserae.jpg', 'window-seat.jpg', 'zenith.jpg', 'zero-sum.jpg'
+    ];
+
+    for (i = 0; i < beers.length; i++) {
+      var width = getRandomSize(200, 450);
+      var height = getRandomSize(200, 450);
+      $('#photos').append('<img style="height:' + height + 'px;width:' + width + 'px;" src="img/beers/' + beers[i] + '" alt=' + beers[i].slice(0, -4) + '>');
+    }
+  </script>
+
+</body>
+
+</html>

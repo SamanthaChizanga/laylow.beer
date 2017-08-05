@@ -1,147 +1,155 @@
 html {
-    height: 100%;
-    background: url("../img/background.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  height: 100%;
+  background: url("../img/background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-    font-family: 'Francois One', sans-serif;
-    font-size: 100%;
+  font-family: 'Francois One', sans-serif;
+  font-size: 100%;
 }
 
 div {
-    display: block;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
 }
 
 header {
-    margin: 3.5% 0 4%;
+  margin: 3.5% 0 4%;
 }
 
 h1 {
-    text-align: center;
-    text-indent: -.12em;
-    color: white;
-    font: 'Francois One', sans-serif;
-    display: inline-block;
-    margin: 0 auto;
-    line-height: 1;
-    width: 100%;
+  text-align: center;
+  text-indent: -.12em;
+  color: white;
+  font: 'Francois One', sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1;
+  width: 100%;
+  opacity: 0.9;
+}
+
+a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
 }
 
 .container {
-    width: 94%;
-    max-width: 1440px;
-    margin: 0 auto;
+  width: 94%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 
 /* Small */
 
 @media only screen and (min-width: 100px) {
-    .container {
-        width: 60%;
-    }
+  .container {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 100px) and (orientation: portrait) {
-    .container {
-        width: 80%;
-    }
+  .container {
+    width: 80%;
+  }
 }
 
 
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
-    .container {
-        width: 55%;
-    }
+  .container {
+    width: 55%;
+  }
 }
 
 @media only screen and (min-width: 320px) and (orientation: portrait) {
-    .container {
-        width: 75%;
-    }
+  .container {
+    width: 75%;
+  }
 }
 
 
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: 480px) {
-    .container {
-        width: 50%;
-    }
+  .container {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 480px) and (orientation: portrait) {
-    .container {
-        width: 70%;
-    }
+  .container {
+    width: 70%;
+  }
 }
 
 
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
-    .container {
-        width: 45%;
-    }
+  .container {
+    width: 45%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-    .container {
-        width: 65%;
-    }
+  .container {
+    width: 65%;
+  }
 }
 
 
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-    .container {
-        width: 40%;
-    }
+  .container {
+    width: 40%;
+  }
 }
 
 @media only screen and (min-width: 992px) and (orientation: portrait) {
-    .container {
-        width: 60%;
-    }
+  .container {
+    width: 60%;
+  }
 }
 
 
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1150px) {
-    .container {
-        width: 35%;
-    }
+  .container {
+    width: 35%;
+  }
 }
 
 @media only screen and (min-width: 1150px) and (orientation: portrait) {
-    .container {
-        width: 55%;
-    }
+  .container {
+    width: 55%;
+  }
 }
 
 
 /* Larger Devices, Wide Screens */
 
 @media only screen and (min-width: 1500px) {
-    .container {
-        width: 30%;
-    }
+  .container {
+    width: 30%;
+  }
 }
 
 @media only screen and (min-width: 1500px) and (orientation: portrait) {
-    .container {
-        width: 50%;
-    }
+  .container {
+    width: 50%;
+  }
 }
