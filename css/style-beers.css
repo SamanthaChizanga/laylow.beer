@@ -32,6 +32,9 @@ img.normal {
 	filter: grayscale(0%);
 }
 
+.modalContent {
+}
+
 @media (max-width: 1500px) {
   #photos {
     -moz-column-count: 3;
