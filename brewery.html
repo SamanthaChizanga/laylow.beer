@@ -38,7 +38,7 @@
       stickyFooter: false,
       closeMethods: ['overlay', 'button', 'escape'],
       closeLabel: "Close",
-      cssClass: ['custom-class-1', 'custom-class-2'],
+      cssClass: [],
       onOpen: function() {
           console.log('modal open');
       },
@@ -53,122 +53,146 @@
       }
     });
 
-    function getRandomSize(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-    }
-
     var beersObj = [
       {
-        name: 'bonita',
+        id: 'bonita',
+        name: 'Bonita',
         file: 'bonita.jpg',
-        status: 1
+        status: 1,
+        style: 'Cider',
+        desc: 'Fermented using a blend of saison yeasts, Bonita is a dry and slightly tart apple cider, often with other fruits added into the mix. Intensely refreshing yet complex, the recipe can change depending on the seasonality of the fruit.'
       },
       {
-        name: 'black-on-both-sides',
+        id: 'black-on-both-sides',
+        name: 'Black On Both Sides',
         file: 'black-on-both-sides.jpg',
-        status: 1
+        status: 1,
+        style: 'Stout',
+        desc: 'A deceptively smooth stout, Black on Both Sides is rich and roasty, with a dry yet silky finish. Coffee and dark chocolate notes are balanced by fruity esters from an English yeast strain.'
       },
       {
-        name: 'lowlands',
+        id: 'lowlands',
+        name: 'Lowlands',
         file: 'lowlands.jpg',
-        status: 1
+        status: 1,
+        style: 'Belgian Wit',
+        desc: 'Unlike many witbiers, Lowlands focuses on the bready character of the wheat itself. Citrus and spice, and the yeast-derived aroma, serve to accompany this malt-forward beer.'
       },
       {
-        name: 'cabrillo-ave',
+        name: 'Cabrillo Ave',
         file: 'cabrillo-ave.jpg',
         status: 0
       },
       {
-        name: 'common-ground',
+        name: 'Common Ground',
         file: 'common-ground.jpg',
         status: 0
       },
       {
-        name: 'eye-patch',
+        name: 'Eye Patch',
         file: 'eye-patch.jpg',
         status: 0
       },
       {
-        name: 'figgie-smalls',
+        name: 'Figgie Smalls',
         file: 'figgie-smalls.jpg',
         status: 0
       },
       {
-        name: '1nce-again',
+        name: '1nce Again',
         file: '1nce-again.jpg',
         status: 0
       },
       {
-        name: 'five-elements',
+        name: 'Five Elements',
         file: 'five-elements.jpg',
         status: 0
       },
       {
-        name: 'ghost-in-a-shell',
+        name: 'Ghost In A Shell',
         file: 'ghost-in-a-shell.jpg',
         status: 0
       },
       {
-        name: 'refine',
+        id: 'refine',
+        name: 'Refine',
         file: 'refine.jpg',
-        status: 1
+        status: 1,
+        style: 'Brown',
+        desc: 'In this complex yet drinkable English brown ale, a selection of English malts and black strap molasses are balanced by spicy hops and a fruity yeast strain. The finish is dry and long, with notes of milk chocolate, cola, and fig.'
       },
       {
-        name: 'retrospect',
+        id: 'retrospect',
+        name: 'Retrospect',
         file: 'retrospect.jpg',
-        status: 1
+        status: 1,
+        style: 'Belgian Pale Ale',
+        desc: 'Our Belgian Pale Ale is brewed with a high proportion of flaked rye. It\'s spicy and bitter, but balanced, with juicy notes of citrus, tropical fruit, and white pepper.'
+
       },
       {
-        name: 'zenith',
+        id: 'zenith',
+        name: 'Zenith',
         file: 'zenith.jpg',
-        status: 1
+        status: 1,
+        style: 'Belgian Golden Ale',
+        desc: 'A dry Belgian Golden Ale with delicate fruit aromatics from a specially selected yeast strain. Notes of stone fruit, mint, and bright citrus enhance the long, dry finish.'
       },
       {
-        name: 'instrumental',
+        name: 'Instrumental',
         file: 'instrumental.jpg',
         status: 0
       },
       {
-        name: 'knowledge',
+        name: 'Knowledge',
         file: 'knowledge.jpg',
         status: 0
       },
       {
-        name: 'petra',
+        name: 'Petra',
         file: 'petra.jpg',
         status: 0
       },
       {
-        name: 'red-beauty',
+        name: 'Red Beauty',
         file: 'red-beauty.jpg',
         status: 0
       },
       {
-        name: 'tesserae',
+        name: 'Tesserae',
         file: 'tesserae.jpg',
         status: 0
       },
       {
-        name: 'window-seat',
+        name: 'Window Seat',
         file: 'window-seat.jpg',
         status: 0
       },
       {
-        name: 'zero-sum',
+        name: 'Zero Sum',
         file: 'zero-sum.jpg',
         status: 0
       }
     ]
 
     beersObj.forEach(function(beer) {
-      var width = getRandomSize(200, 450);
-      var height = getRandomSize(200, 450);
       var className = (beer.status) ? "normal" : "desaturate";
-      $('#photos').append('<img class=' + className + ' style="height:' + 300 + 'px;width:' + 300 + 'px;" src="img/beers/' + beer.file + '" alt=' + beer.name + '>');
+      $('#photos').append('<img id="'+ beer.id +'" class=' + className + ' style="height:' + 300 + 'px;width:' + 300 + 'px;" src="img/beers/' + beer.file + '" alt=' + beer.name.replace(" ", "-") + '>');
     });
 
     $( "img" ).click(function() {
-      modal.setContent('<h1 class="modalContent">'+$(this).attr("alt")+'</h1>');
+      for (var i in beersObj) {
+        if ($(this).attr("id") == "undefined") {
+          modal.setContent('<h1 class="modalContent">'+ $(this).attr("alt") + '</h1>');
+          break;
+        }
+        if (beersObj[i].id == $(this).attr("id")) {
+          modal.setContent(
+            '<h1 class="modalContent">'+ beersObj[i].name + '</h1><h2 class="modalContent">'+ beersObj[i].style+ '</h2><h2 class="modalContent">'+ beersObj[i].desc+ '</h2>'
+          );
+          break;
+        }
+      }
       modal.open();
     });
 
