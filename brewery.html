@@ -15,190 +15,77 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Francois+One">
   <link rel="stylesheet" href="css/style-beers.css">
-  <link rel="stylesheet" href="css/tingle.min.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="js/tingle.min.js"></script>
-  <script src="js/jquery.fittext.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 </head>
 
 <body>
 
-  <!-- <div class="image">
-        <img class="logo page-center" src="img/logo.png"></img>
-    </div> -->
+  <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    <main class="mdl-layout__content">
+      <div class="mdl-grid">
 
-  <section id="photos"></section>
 
-  <script type="text/javascript">
-    // instanciate new modal
-    var modal = new tingle.modal({
-      footer: true,
-      stickyFooter: false,
-      closeMethods: ['overlay', 'button', 'escape'],
-      closeLabel: "Close",
-      cssClass: [],
-      onOpen: function() {
-          console.log('modal open');
-      },
-      onClose: function() {
-          console.log('modal closed');
-      },
-      beforeClose: function() {
-          // here's goes some logic
-          // e.g. save content before closing the modal
-          return true; // close the modal
-        return false; // nothing happens
-      }
-    });
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/black-on-both-sides.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>A deceptively smooth stout, Black on Both Sides is rich and roasty, with a dry yet silky finish. Coffee and dark chocolate notes are balanced by fruity esters from an English yeast strain.</p>
+          </div>
+        </div>
 
-    var beersObj = [
-      {
-        id: 'bonita',
-        name: 'Bonita',
-        file: 'bonita.jpg',
-        status: 1,
-        style: 'Cider',
-        desc: 'Fermented using a blend of saison yeasts, Bonita is a dry and slightly tart apple cider, often with other fruits added into the mix. Intensely refreshing yet complex, the recipe can change depending on the seasonality of the fruit.'
-      },
-      {
-        id: 'black-on-both-sides',
-        name: 'Black On Both Sides',
-        file: 'black-on-both-sides.jpg',
-        status: 1,
-        style: 'Stout',
-        desc: 'A deceptively smooth stout, Black on Both Sides is rich and roasty, with a dry yet silky finish. Coffee and dark chocolate notes are balanced by fruity esters from an English yeast strain.'
-      },
-      {
-        id: 'lowlands',
-        name: 'Lowlands',
-        file: 'lowlands.jpg',
-        status: 1,
-        style: 'Belgian Wit',
-        desc: 'Unlike many witbiers, Lowlands focuses on the bready character of the wheat itself. Citrus and spice, and the yeast-derived aroma, serve to accompany this malt-forward beer.'
-      },
-      {
-        name: 'Cabrillo Ave',
-        file: 'cabrillo-ave.jpg',
-        status: 0
-      },
-      {
-        name: 'Common Ground',
-        file: 'common-ground.jpg',
-        status: 0
-      },
-      {
-        name: 'Eye Patch',
-        file: 'eye-patch.jpg',
-        status: 0
-      },
-      {
-        name: 'Figgie Smalls',
-        file: 'figgie-smalls.jpg',
-        status: 0
-      },
-      {
-        name: '1nce Again',
-        file: '1nce-again.jpg',
-        status: 0
-      },
-      {
-        name: 'Five Elements',
-        file: 'five-elements.jpg',
-        status: 0
-      },
-      {
-        name: 'Ghost In A Shell',
-        file: 'ghost-in-a-shell.jpg',
-        status: 0
-      },
-      {
-        id: 'refine',
-        name: 'Refine',
-        file: 'refine.jpg',
-        status: 1,
-        style: 'Brown',
-        desc: 'In this complex yet drinkable English brown ale, a selection of English malts and black strap molasses are balanced by spicy hops and a fruity yeast strain. The finish is dry and long, with notes of milk chocolate, cola, and fig.'
-      },
-      {
-        id: 'retrospect',
-        name: 'Retrospect',
-        file: 'retrospect.jpg',
-        status: 1,
-        style: 'Belgian Pale Ale',
-        desc: 'Our Belgian Pale Ale is brewed with a high proportion of flaked rye. It\'s spicy and bitter, but balanced, with juicy notes of citrus, tropical fruit, and white pepper.'
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/bonita.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>Fermented using a blend of saison yeasts, Bonita is a dry and slightly tart apple cider, often with other fruits added into the mix. Intensely refreshing yet complex, the recipe can change depending on the seasonality of the fruit.</p>
+          </div>
+        </div>
 
-      },
-      {
-        id: 'zenith',
-        name: 'Zenith',
-        file: 'zenith.jpg',
-        status: 1,
-        style: 'Belgian Golden Ale',
-        desc: 'A dry Belgian Golden Ale with delicate fruit aromatics from a specially selected yeast strain. Notes of stone fruit, mint, and bright citrus enhance the long, dry finish.'
-      },
-      {
-        name: 'Instrumental',
-        file: 'instrumental.jpg',
-        status: 0
-      },
-      {
-        name: 'Knowledge',
-        file: 'knowledge.jpg',
-        status: 0
-      },
-      {
-        name: 'Petra',
-        file: 'petra.jpg',
-        status: 0
-      },
-      {
-        name: 'Red Beauty',
-        file: 'red-beauty.jpg',
-        status: 0
-      },
-      {
-        name: 'Tesserae',
-        file: 'tesserae.jpg',
-        status: 0
-      },
-      {
-        name: 'Window Seat',
-        file: 'window-seat.jpg',
-        status: 0
-      },
-      {
-        name: 'Zero Sum',
-        file: 'zero-sum.jpg',
-        status: 0
-      }
-    ]
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/lowlands.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>Unlike many witbiers, Lowlands focuses on the bready character of the wheat itself. Citrus and spice, and the yeast-derived aroma, serve to accompany this malt-forward beer.</p>
+          </div>
+        </div>
 
-    beersObj.forEach(function(beer) {
-      var className = (beer.status) ? "normal" : "desaturate";
-      $('#photos').append('<img id="'+ beer.id +'" class=' + className + ' style="height:' + 300 + 'px;width:' + 300 + 'px;" src="img/beers/' + beer.file + '" alt=' + beer.name.replace(" ", "-") + '>');
-    });
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/refine.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>In this complex yet drinkable English brown ale, a selection of English malts and black strap molasses are balanced by spicy hops and a fruity yeast strain. The finish is dry and long, with notes of milk chocolate, cola, and fig.</p>
+          </div>
+        </div>
 
-    $( "img" ).click(function() {
-      for (var i in beersObj) {
-        if ($(this).attr("id") == "undefined") {
-          modal.setContent('<h1 class="modalContent">'+ $(this).attr("alt") + '</h1>');
-          break;
-        }
-        if (beersObj[i].id == $(this).attr("id")) {
-          modal.setContent(
-            '<h1 class="modalContent">'+ beersObj[i].name + '</h1><h2 class="modalContent">'+ beersObj[i].style+ '</h2><h2 class="modalContent">'+ beersObj[i].desc+ '</h2>'
-          );
-          break;
-        }
-      }
-      modal.open();
-    });
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/retrospect.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>Our Belgian Pale Ale is brewed with a high proportion of flaked rye. It\'s spicy and bitter, but balanced, with juicy notes of citrus, tropical fruit, and white pepper.</p>
+          </div>
+        </div>
 
-    $("h1").fitText(0.3);
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="img/beers/zenith.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__supporting-text">
+            <p>A dry Belgian Golden Ale with delicate fruit aromatics from a specially selected yeast strain. Notes of stone fruit, mint, and bright citrus enhance the long, dry finish.</p>
+          </div>
+        </div>
 
-  </script>
+      </div>
+    </main>
+  </div>
 
 </body>
 
