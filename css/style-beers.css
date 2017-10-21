@@ -3,7 +3,13 @@ html {
 }
 
 .mdl-grid {
-  max-width: 75%;
+  max-width: 90%;
+}
+
+@media (min-width: 1000px) {
+  .mdl-grid {
+    max-width: 74%;
+  }
 }
 
 .mdl-card__media {
@@ -18,9 +24,14 @@ html {
   display: flex;
   box-sizing: border-box;
   align-items: center;
+  margin-top: auto;
 }
 
 .mdl-card__actions>.mdl-button--icon {
   margin-right: 3px;
   margin-left: 3px;
+}
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.7);
 }
