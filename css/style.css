@@ -12,14 +12,6 @@ body {
   font-size: 100%;
 }
 
-div {
-  display: block;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-}
-
 header {
   margin: 3.5% 0 4%;
 }
@@ -47,8 +39,22 @@ a {
   width: 94%;
   max-width: 1440px;
   margin: 0 auto;
+  display: block;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
 }
 
+.image {
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
 
 /* Small */
 
@@ -64,7 +70,6 @@ a {
   }
 }
 
-
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
@@ -78,7 +83,6 @@ a {
     width: 75%;
   }
 }
-
 
 /* Extra Small Devices, Phones */
 
@@ -94,7 +98,6 @@ a {
   }
 }
 
-
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
@@ -108,7 +111,6 @@ a {
     width: 65%;
   }
 }
-
 
 /* Medium Devices, Desktops */
 
@@ -124,7 +126,6 @@ a {
   }
 }
 
-
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1150px) {
@@ -138,7 +139,6 @@ a {
     width: 55%;
   }
 }
-
 
 /* Larger Devices, Wide Screens */
 
