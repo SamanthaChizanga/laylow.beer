@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  background: url("../img/background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 32%;
+}
+
+.image {
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
